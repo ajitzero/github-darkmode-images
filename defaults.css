@@ -1,0 +1,20 @@
+html[data-color-mode="dark"] .markdown-body img[src$=".png"],
+html[data-color-mode="dark"] .markdown-body img[src$=".svg"] {
+  background    : #fff;
+  opacity       : 0.8;  /* Personal preference over undersaturating it */
+  transition    : opacity 250ms ease-in-out;
+
+  /* Matching GitHub */
+  border-radius : 6px;  /* 🙃 */
+  padding       : 16px; /* Half of GitHub's standard */
+  box-sizing    : border-box;
+
+  /* Some smaller images have adjacent elements (like badges) after a logo */
+  margin-right  : 16px; /* Half of GitHub's standard */
+}
+
+html[data-color-mode="dark"] .markdown-body img[src$=".png"]:hover,
+html[data-color-mode="dark"] .markdown-body img[src$=".svg"]:hover {
+  opacity       : 0.95;
+}
+

@@ -1,0 +1,21 @@
+{
+	"name": "Better GitHub Dark Mode Images",
+	"version": "1.0.0",
+	"description": "This fixes images with dark content on a transparent background, where the repo authors couldn't predict that GitHub could actually bring in dark mode but still not cancel their ICE contract.",
+	"homepage_url": "https://github.com/AjitZero/github-darkmode-images",
+	"manifest_version": 2,
+	"minimum_chrome_version": "36",
+	"icons": {
+		"128": "logo.png"
+	},
+	"permissions": [
+		"https://github.com/*/*"
+	],
+	"content_scripts": [
+		{
+			"run_at": "document_end",
+			"matches": ["https://github.com/*/*"],
+			"css": ["defaults.css"]
+		}
+	]
+}
